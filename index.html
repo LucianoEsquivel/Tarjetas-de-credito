@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#003366"> 
+    <title>Simulador Dietrich - Pagos</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="img/icons/icon-192x192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Simulador">
+</head>
+<body>
+
+    <div class="app-container">
+        <header class="main-header">
+            <img src="img/dietrich.png" alt="Logo Dietrich" class="banner-logo">
+        </header>
+
+        <main class="promo-selection">
+            <h1 class="welcome-title">Selecciona tu Plan de Cuotas</h1>
+            <p class="welcome-subtitle">Haz clic en la promoción para simular tu tarjeta.</p>
+
+            <div class="buttons-grid">
+
+                <button class="promo-card" id="btn-payway">
+                    <div class="card-content">
+                        <h2 class="promo-legend">3, 6 y 12 cuotas sin interés</h2>
+                        <p class="promo-context">(Payway)</p>
+                    </div>
+                    <div class="bank-logos-grid">
+                        <img src="img/payway/credicoop.png" alt="Credicoop" class="bank-logo-mini">
+                        <img src="img/payway/comafi.png" alt="Comafi" class="bank-logo-mini">
+                        <img src="img/payway/icbc.png" alt="ICBC" class="bank-logo-mini">
+                        <img src="img/payway/provincia.png" alt="Provincia" class="bank-logo-mini">
+                        <img src="img/payway/ciudad.png" alt="Ciudad" class="bank-logo-mini">
+                        <img src="img/payway/supervielle.png" alt="Supervielle" class="bank-logo-mini">
+                        <img src="img/payway/patagonia.png" alt="Patagonia" class="bank-logo-mini">
+                    </div>
+                </button>
+
+                <button class="promo-card" id="btn-getnet">
+                    <div class="card-content">
+                        <h2 class="promo-legend">3 y 6 cuotas sin interés</h2>
+                        <p class="promo-context">(getnet)</p>
+                    </div>
+                    <div class="bank-logos-grid logos-4">
+                        <img src="img/getnet/santander.png" alt="Santander" class="bank-logo-mini">
+                        <img src="img/getnet/macro.png" alt="Macro" class="bank-logo-mini">
+                        <img src="img/getnet/bbva.png" alt="BBVA" class="bank-logo-mini">
+                        <img src="img/getnet/nacion.png" alt="Banco Nación" class="bank-logo-mini">
+                    </div>
+                </button>
+
+                <button class="promo-card nave-card" id="btn-nave">
+                    <div class="card-content">
+                        <h2 class="promo-legend">3 y 6 cuotas sin interés</h2>
+                        <p class="promo-context">(Galicia - nave)</p>
+                    </div>
+                    <div class="bank-logos-grid single-logo">
+                        <img src="img/nave/galicia.png" alt="Galicia Nave" class="bank-logo-single">
+                    </div>
+                </button>
+
+            </div> 
+        </main>
+
+        <main class="calculator-section" id="calculator-screen" style="display: none;">
+            
+            <div class="calc-header">
+                <button id="btn-back" class="btn-back">⬅ Volver</button>
+                <h2 id="calc-title" class="calc-title">Simulador</h2>
+            </div>
+
+            <div class="calc-card">
+                <div class="input-group">
+                    <label for="monto-input">Monto a Financiar ($)</label>
+                   <input type="text" id="monto-input" placeholder="$ 0" inputmode="numeric">
+                </div>
+
+                <div class="input-group">
+                    <label>Selecciona el Plazo</label>
+                    <div class="cuotas-grid" id="cuotas-container">
+                        </div>
+                </div>
+
+                <div class="input-group slider-group" id="tasa-group" style="display: none;">
+                    <div class="slider-labels">
+                        <label>Tasa Aplicada: <span id="tasa-display" class="tasa-highlight">0.00%</span></label>
+                        <span id="tasa-original-display" class="tasa-original">Lista: 0.00%</span>
+                    </div>
+                    <input type="range" id="tasa-slider" min="0" max="100" step="0.01" value="0">
+                </div>
+            </div>
+
+            <div class="result-card" id="result-card" style="display: none;">
+                <p class="result-label">Valor de Cuota Mensual</p>
+                <h3 class="result-cuota" id="res-cuota">$0</h3>
+                
+                <div class="result-details">
+                    <p>Monto total a pagar por el cliente: <strong id="res-total-cliente">$0</strong></p>
+                    
+                    <div id="costo-absorbido-container" class="costo-absorbido-row" style="display: none;">
+                        <p>Costo total a absorber: <strong id="res-costo-absorbido">$0</strong></p>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div> 
+
+    <script src="base.js"></script>
+    <script src="app.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(reg => console.log('Service Worker registrado correctamente', reg))
+                    .catch(err => console.warn('Error al registrar el Service Worker', err));
+            });
+        }
+    </script>
+</body>
+</html>
