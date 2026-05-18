@@ -52,5 +52,19 @@ const baseDatosPromos = [
         cuotas: 6,
         recargo_porcentaje: 7.30, 
         recargo_minimo: 0.00 
-    }
+    },
+
+    {
+        plataforma: "nave",
+        cuotas: 9,
+        recargo_porcentaje: 10.40, 
+        recargo_minimo: 0.00 
+    },
+
+    {
+        plataforma: "nave",
+        cuotas: 12,
+        recargo_porcentaje: 12.80, 
+        recargo_minimo: 0.00 
+    },
 ];
