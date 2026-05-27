@@ -68,3 +68,19 @@ const baseDatosPromos = [
         recargo_minimo: 0.00 
     },
 ];
+
+// ==========================================
+// BASE DE DATOS DE NOVEDADES
+// ==========================================
+const baseDatosNovedades = [
+    {
+        fecha: "06/05/2026",
+        titulo: "Nuevas Cuotas Nave",
+        descripcion: "Se habilitó la opción de 9 cuotas sin interés para Galicia Nave con un recargo del 10.40%."
+    },
+    {
+        fecha: "02/05/2026",
+        titulo: "Actualización de Tasas",
+        descripcion: "Se actualizaron los coeficientes de Payway para el mes en curso. Por favor verificar los topes de reintegro."
+    }
+];

@@ -187,4 +187,50 @@ document.addEventListener('DOMContentLoaded', () => {
     function formatearMoneda(numero) {
         return numero.toLocaleString('es-AR', { style: 'currency', currency: 'ARS' });
     }
+
+    // ==========================================
+    // 7. LÓGICA DEL MODAL DE NOVEDADES
+    // ==========================================
+    const btnNovedades = document.getElementById('btn-novedades');
+    const modalNovedades = document.getElementById('novedades-modal');
+    const btnCloseModal = document.getElementById('btn-close-modal');
+    const novedadesContainer = document.getElementById('novedades-container');
+
+    // Función para dibujar las novedades desde base.js
+    function renderizarNovedades() {
+        novedadesContainer.innerHTML = ''; // Limpiamos contenedor
+        
+        if (typeof baseDatosNovedades !== 'undefined' && baseDatosNovedades.length > 0) {
+            baseDatosNovedades.forEach(novedad => {
+                const item = document.createElement('div');
+                item.className = 'novedad-item';
+                item.innerHTML = `
+                    <div class="novedad-fecha">${novedad.fecha}</div>
+                    <div class="novedad-titulo">${novedad.titulo}</div>
+                    <div class="novedad-texto">${novedad.descripcion}</div>
+                `;
+                novedadesContainer.appendChild(item);
+            });
+        } else {
+            novedadesContainer.innerHTML = '<p style="text-align:center; color:#666;">No hay novedades por el momento.</p>';
+        }
+    }
+
+    // Abrir modal
+    btnNovedades.addEventListener('click', () => {
+        renderizarNovedades(); // Las generamos en el momento por si hubo cambios
+        modalNovedades.style.display = 'flex';
+    });
+
+    // Cerrar modal con la X
+    btnCloseModal.addEventListener('click', () => {
+        modalNovedades.style.display = 'none';
+    });
+
+    // Cerrar modal al hacer clic afuera de la caja blanca
+    modalNovedades.addEventListener('click', (e) => {
+        if (e.target === modalNovedades) {
+            modalNovedades.style.display = 'none';
+        }
+    });
 });

@@ -365,3 +365,179 @@ input[type=range] {
     border-top: 1px solid rgba(255,255,255,0.2);
     color: #ffb74d; /* Naranja/Amarillo para alertar sobre el costo absorbido */
 }
+
+
+/* =========================================
+   HEADER MODIFICADO
+========================================= */
+.main-header {
+    padding: 15px 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.banner-logo {
+    max-height: 40px; /* Un poco más pequeño para alinear bien con el botón */
+}
+
+.btn-novedades {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-novedades:hover {
+    background-color: #ffffff;
+    color: #003366;
+}
+
+/* =========================================
+   BOTÓN FLOTANTE WHATSAPP
+========================================= */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-icon {
+    width: 35px;
+    height: 35px;
+    fill: #ffffff;
+}
+
+/* =========================================
+   MODAL DE NOVEDADES
+========================================= */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInModal 0.3s ease;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    overflow: hidden;
+    transform: translateY(0);
+    animation: slideUpModal 0.3s ease;
+}
+
+.modal-header {
+    background-color: #003366;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: transform 0.2s;
+}
+
+.close-btn:hover {
+    transform: scale(1.2);
+}
+
+.modal-body {
+    padding: 20px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.novedad-item {
+    border-left: 4px solid #007bff;
+    background-color: #f8f9fa;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 0 8px 8px 0;
+}
+
+.novedad-item:last-child {
+    margin-bottom: 0;
+}
+
+.novedad-fecha {
+    font-size: 0.8rem;
+    color: #6c757d;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.novedad-titulo {
+    font-size: 1.05rem;
+    color: #003366;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.novedad-texto {
+    font-size: 0.95rem;
+    color: #444;
+}
+
+@keyframes fadeInModal {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUpModal {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
