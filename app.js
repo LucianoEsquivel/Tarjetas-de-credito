@@ -188,6 +188,8 @@ document.addEventListener('DOMContentLoaded', () => {
         return numero.toLocaleString('es-AR', { style: 'currency', currency: 'ARS' });
     }
 
+
+    
     // ==========================================
     // 7. LÓGICA DEL MODAL DE NOVEDADES
     // ==========================================

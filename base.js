@@ -6,19 +6,19 @@ const baseDatosPromos = [
     {
         plataforma: "payway",
         cuotas: 3,
-        recargo_porcentaje: 3.83, //
+        recargo_porcentaje: 3.05, //
         recargo_minimo: 0.00      // 
     },
     {
         plataforma: "payway",
         cuotas: 6,
-        recargo_porcentaje: 6.66, 
+        recargo_porcentaje: 5.90, 
         recargo_minimo: 0.00 
     },
     {
         plataforma: "payway",
         cuotas: 12,
-        recargo_porcentaje: 11.98, 
+        recargo_porcentaje: 11.27, 
         recargo_minimo: 0.00 
     },
 
@@ -28,13 +28,13 @@ const baseDatosPromos = [
     {
         plataforma: "getnet",
         cuotas: 3,
-        recargo_porcentaje: 5.72, 
+        recargo_porcentaje: 4.85, 
         recargo_minimo: 0.00 
     },
     {
         plataforma: "getnet",
         cuotas: 6,
-        recargo_porcentaje: 9.85, 
+        recargo_porcentaje: 8.40, 
         recargo_minimo: 0.00 
     },
 
@@ -47,6 +47,7 @@ const baseDatosPromos = [
         recargo_porcentaje: 4.40, 
         recargo_minimo: 0.00 
     },
+
     {
         plataforma: "nave",
         cuotas: 6,
@@ -74,13 +75,14 @@ const baseDatosPromos = [
 // ==========================================
 const baseDatosNovedades = [
     {
-        fecha: "06/05/2026",
-        titulo: "Nuevas Cuotas Nave",
-        descripcion: "Se habilitó la opción de 9 cuotas sin interés para Galicia Nave con un recargo del 10.40%."
+        fecha: "29/06/2026",
+        titulo: "Payway",
+        descripcion: "Payway bajo su tasa directa en todos sus plazos"
     },
+    
     {
-        fecha: "02/05/2026",
-        titulo: "Actualización de Tasas",
-        descripcion: "Se actualizaron los coeficientes de Payway para el mes en curso. Por favor verificar los topes de reintegro."
+        fecha: "29/06/2026",
+        titulo: "Getnet",
+        descripcion: "Getnet bajo su tasa directa en todos sus plazos"
     }
 ];
