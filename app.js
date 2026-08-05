@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Botones de Promos (Pantalla 1)
     const btnPayway = document.getElementById('btn-payway');
+    const btnPayway2 = document.getElementById('btn-Payway');
     const btnGetnet = document.getElementById('btn-getnet');
     const btnNave = document.getElementById('btn-nave');
 
@@ -84,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     btnPayway.addEventListener('click', () => abrirCalculadora('payway', 'Payway'));
+    btnPayway2.addEventListener('click', () => abrirCalculadora('Payway', 'Payway (Bancos Seleccionados)'));
     btnGetnet.addEventListener('click', () => abrirCalculadora('getnet', 'Getnet'));
     btnNave.addEventListener('click', () => abrirCalculadora('nave', 'Galicia Nave'));
 

@@ -25,15 +25,43 @@ body {
 /* --- HEADER / BANNER --- */
 .main-header {
     background-color: #003366; 
-    padding: 20px;
+    padding: 15px 20px;
     text-align: center;
     border-bottom: 4px solid #002244;
 }
 
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .banner-logo {
-    max-height: 60px;
+    max-height: 40px;
     max-width: 80%;
     height: auto;
+}
+
+.btn-novedades {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-novedades:hover {
+    background-color: #ffffff;
+    color: #003366;
 }
 
 /* --- CONTENIDO PRINCIPAL --- */
@@ -59,9 +87,9 @@ body {
 /* --- GRILLA DE BOTONES/TARJETAS --- */
 .buttons-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 30px; 
-    align-items: stretch; 
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: stretch;
 }
 
 /* --- ESTILO DE TARJETA/BOTÓN (PROMO-CARD) --- */
@@ -131,8 +159,8 @@ body {
     flex-wrap: wrap;
     justify-content: center; 
     align-items: center;
-    gap: 20px; 
-    padding: 30px 20px; 
+    gap: 12px;
+    padding: 20px 15px;
     flex-grow: 1; 
     background-color: #ffffff;
 }
@@ -140,19 +168,43 @@ body {
 /* Logos con color pero atenuados por defecto */
 .bank-logo-mini {
     max-width: 100%;
-    max-height: 50px; 
+    max-height: 38px;
     height: auto;
-    filter: grayscale(40%) opacity(70%); /* Conservan color, pero un poco lavados */
-    transition: all 0.3s ease;
+    filter: grayscale(40%) opacity(70%); 
+    transition: all 0.3s ease; 
 }
 
-/* Al pasar el mouse: recuperan todo el color y se saturan un 30% más para dar viveza */
 .promo-card:hover .bank-logo-mini {
     filter: grayscale(0%) opacity(100%) saturate(130%); 
     transform: scale(1.05);
 }
 
 .bank-logo-mini:hover {
+    transform: scale(1.15) !important;
+}
+
+/* --- ETIQUETAS PARA BANCOS SIN LOGO --- */
+.bank-text-mini {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #666;
+    background-color: #f0f4f8;
+    padding: 5px 8px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border: 1px solid #e1e8ed;
+}
+
+.promo-card:hover .bank-text-mini {
+    background-color: #003366;
+    color: #ffffff;
+    border-color: #003366;
+    transform: scale(1.05);
+}
+
+.bank-text-mini:hover {
     transform: scale(1.15) !important;
 }
 
@@ -164,12 +216,12 @@ body {
 .bank-logo-single {
     max-height: 130px; 
     width: auto;
-    filter: grayscale(40%) opacity(70%); /* Conserva color atenuado */
+    filter: grayscale(40%) opacity(70%); 
     transition: all 0.3s ease;
 }
 
 .promo-card:hover .bank-logo-single {
-    filter: grayscale(0%) opacity(100%) saturate(130%); /* Estalla de color */
+    filter: grayscale(0%) opacity(100%) saturate(130%); 
     transform: scale(1.05);
 }
 
@@ -190,7 +242,6 @@ body {
 /* =========================================
    ESTILOS DE LA PANTALLA 2 (CALCULADORA)
 ========================================= */
-
 .calculator-section {
     padding: 20px 30px;
     animation: fadeIn 0.3s ease-in-out;
@@ -320,12 +371,12 @@ body {
 input[type=range] {
     width: 100%;
     margin-top: 10px;
-    accent-color: #003366; /* Color del deslizador */
+    accent-color: #003366;
 }
 
 /* Tarjeta de Resultados */
 .result-card {
-    background-color: #003366; /* Fondo azul Dietrich */
+    background-color: #003366; 
     color: #ffffff;
     text-align: center;
     border: none;
@@ -363,47 +414,7 @@ input[type=range] {
     margin-top: 10px !important;
     padding-top: 10px;
     border-top: 1px solid rgba(255,255,255,0.2);
-    color: #ffb74d; /* Naranja/Amarillo para alertar sobre el costo absorbido */
-}
-
-
-/* =========================================
-   HEADER MODIFICADO
-========================================= */
-.main-header {
-    padding: 15px 20px;
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.banner-logo {
-    max-height: 40px; /* Un poco más pequeño para alinear bien con el botón */
-}
-
-.btn-novedades {
-    background-color: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: #ffffff;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.btn-novedades:hover {
-    background-color: #ffffff;
-    color: #003366;
+    color: #ffb74d; 
 }
 
 /* =========================================

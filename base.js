@@ -22,6 +22,28 @@ const baseDatosPromos = [
         recargo_minimo: 0.00 
     },
 
+    // ==============================================================================================================================
+    // 1. PAYWAY2 (3, 6 y 12 Cuotas) (BBVA Francés, Santander, grupo Galicia, Nación, CMR, Mira, Nevada, Naranja y Macro)
+    // ==============================================================================================================================
+    {
+        plataforma: "Payway",
+        cuotas: 3,
+        recargo_porcentaje: 4.22, 
+        recargo_minimo: 0.00      
+    },
+    {
+        plataforma: "Payway",
+        cuotas: 6,
+        recargo_porcentaje: 8.10, 
+        recargo_minimo: 0.00 
+    },
+    {
+        plataforma: "Payway",
+        cuotas: 12,
+        recargo_porcentaje: 15.24, 
+        recargo_minimo: 0.00 
+    },
+
     // ==========================================
     // 2. GETNET (3 y 6 Cuotas)
     // ==========================================
