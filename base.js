@@ -18,7 +18,7 @@ const baseDatosPromos = [
     {
         plataforma: "payway",
         cuotas: 12,
-        recargo_porcentaje: 11.27, 
+        recargo_porcentaje: 8.64, 
         recargo_minimo: 0.00 
     },
 
@@ -28,19 +28,19 @@ const baseDatosPromos = [
     {
         plataforma: "Payway",
         cuotas: 3,
-        recargo_porcentaje: 4.22, 
+        recargo_porcentaje: 3.64, 
         recargo_minimo: 0.00      
     },
     {
         plataforma: "Payway",
         cuotas: 6,
-        recargo_porcentaje: 8.10, 
+        recargo_porcentaje: 7.01, 
         recargo_minimo: 0.00 
     },
     {
         plataforma: "Payway",
         cuotas: 12,
-        recargo_porcentaje: 15.24, 
+        recargo_porcentaje: 11.77, 
         recargo_minimo: 0.00 
     },
 
@@ -96,6 +96,12 @@ const baseDatosPromos = [
 // BASE DE DATOS DE NOVEDADES
 // ==========================================
 const baseDatosNovedades = [
+
+    {
+        fecha: "20/08/2026",
+        titulo: "Payway",
+        descripcion: "Payway bajo sus tasas en el plazo 9 y en Payway (BBVA, Santander, BNA, N, etc) bajo sus tasas en todos los plazos (3, 6 y 9).",
+    },
     {
         fecha: "05/08/2026",
         titulo: "Nave",
