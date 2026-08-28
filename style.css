@@ -552,3 +552,8 @@ input[type=range] {
     from { transform: translateY(20px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
+
+/* Hacer que la tarjeta de Payway ocupe las dos columnas */
+.payway-full-card {
+    grid-column: 1 / -1; 
+}
