@@ -20,6 +20,7 @@ const baseDatosPromos = [
         recargo_porcentaje: 13.29, 
         recargo_minimo: 0.00 
     },
+    
 
     // ==========================================
     // 2. GETNET (3 y 6 Cuotas)

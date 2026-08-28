@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Botones de Promos (Pantalla 1)
     const btnPayway = document.getElementById('btn-payway');
-    const btnGetnet = document.getElementById('btn-getnet');
-    const btnNave = document.getElementById('btn-nave');
+    //const btnGetnet = document.getElementById('btn-getnet');
+    //const btnNave = document.getElementById('btn-nave');
 
     // Controles Calculadora (Pantalla 2)
     const inputMonto = document.getElementById('monto-input');
@@ -84,8 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     btnPayway.addEventListener('click', () => abrirCalculadora('payway', 'Payway'));
-    btnGetnet.addEventListener('click', () => abrirCalculadora('getnet', 'Getnet'));
-    btnNave.addEventListener('click', () => abrirCalculadora('nave', 'Galicia Nave'));
+    //btnGetnet.addEventListener('click', () => abrirCalculadora('getnet', 'Getnet'));
+    //btnNave.addEventListener('click', () => abrirCalculadora('nave', 'Galicia Nave'));
 
     btnBack.addEventListener('click', () => {
         screenCalc.style.display = 'none';
