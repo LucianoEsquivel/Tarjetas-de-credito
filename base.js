@@ -21,7 +21,6 @@ const baseDatosPromos = [
         recargo_minimo: 0.00 
     },
     
-
     // ==========================================
     // 2. GETNET (3 y 6 Cuotas)
     // ==========================================
@@ -44,25 +43,25 @@ const baseDatosPromos = [
     {
         plataforma: "nave",
         cuotas: 3,
-        recargo_porcentaje: 4.90, 
+        recargo_porcentaje: 3.78, 
         recargo_minimo: 0.00 
     },
     {
         plataforma: "nave",
         cuotas: 6,
-        recargo_porcentaje: 8.40, 
+        recargo_porcentaje: 6.45, 
         recargo_minimo: 0.00 
     },
     {
         plataforma: "nave",
         cuotas: 9,
-        recargo_porcentaje: 12.40, 
+        recargo_porcentaje: 9.67, 
         recargo_minimo: 0.00 
     },
     {
         plataforma: "nave",
         cuotas: 12,
-        recargo_porcentaje: 15.60, 
+        recargo_porcentaje: 12.10, 
         recargo_minimo: 0.00 
     },
 ];
@@ -72,13 +71,9 @@ const baseDatosPromos = [
 // ==========================================
 const baseDatosNovedades = [
     {
-        fecha: "20/08/2026",
-        titulo: "Payway",
-        descripcion: "Se unificaron todos los bancos en un solo botón de Payway y se actualizaron las tasas para 3, 6 y 12 cuotas.",
+        fecha: "19/10/2026",
+        titulo: "NAVE",
+        descripcion: "Rebaja obtenida en NAVE, bajando la tasa al 25% para cobros con tarjetas del Galicia Visa y Master, Amex NO. En función a esto para cobros con tarjetas Galicia Visa y Master volvemos a cobrar con NAVE. Amex no se opera con NAVE.",
     },
-    {
-        fecha: "05/08/2026",
-        titulo: "Nave",
-        descripcion: "Nave aumento las tasas de recargo para 3, 6, 9 y 12 cuotas.",
-    },
+    
 ];
