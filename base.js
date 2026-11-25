@@ -5,19 +5,19 @@ const baseDatosPromos = [
     {
         plataforma: "payway",
         cuotas: 3,
-        recargo_porcentaje: 3.64, 
+        recargo_porcentaje: 4.56, 
         recargo_minimo: 0.00      
     },
     {
         plataforma: "payway",
         cuotas: 6,
-        recargo_porcentaje: 7.01, 
+        recargo_porcentaje: 7.90, 
         recargo_minimo: 0.00 
     },
     {
         plataforma: "payway",
         cuotas: 12,
-        recargo_porcentaje: 13.29, 
+        recargo_porcentaje: 15.37, 
         recargo_minimo: 0.00 
     },
     
